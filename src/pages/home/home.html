@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Welcome to MyHomeX!</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="center" *ngFor="let floor of house.floors">
+    <button ion-button round (click)="gotoFloor(floor.id)">{{floor.name}}</button>
+  </div>
+</ion-content>
