@@ -3,7 +3,7 @@
     <ion-title>{{room}}</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content>
   <h2>Categories</h2>
   <ion-list>
     <div *ngFor="let category of categories">
@@ -12,8 +12,6 @@
       <div *ngIf="isCategoryShown(category)">
         <ion-item *ngFor="let item of category.items">{{item.name}}</ion-item>
       </div>
-      <ion-item-divider>
-      </ion-item-divider>
     </div>
   </ion-list>
 </ion-content>

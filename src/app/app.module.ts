@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FloorPage } from '../pages/floor/floor';
 import { RoomPage } from '../pages/room/room';
+import { HouseService} from '../service/house.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,6 @@ import { RoomPage } from '../pages/room/room';
     FloorPage,
     RoomPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, HouseService]
 })
 export class AppModule { }

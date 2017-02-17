@@ -4,7 +4,13 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <div class="center" *ngFor = "let room of floor.rooms">
-    <button ion-button round (click) = "gotoRoom(room)">{{room}}</button>
+  <div class="center" *ngFor="let room of floor.rooms">
+    <button ion-button round (click)="gotoRoom(room)">{{room}}</button>
   </div>
+  <ion-fab bottom right #fab>
+    <button ion-fab><ion-icon name = "add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="presentPrompt()">Room</button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>
